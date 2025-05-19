@@ -13,6 +13,10 @@ function App() {
     }
   };
 
+  const deleteTask = (id: number) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
   return (
     <div className='max-w-md mx-auto mt-10 p-6 bg-gray-100 rounded-lg shadow-md'>
       <h1 className='text-2xl font-bold text-center mb-4'>Task Manager</h1>
@@ -34,7 +38,7 @@ function App() {
       <h2 className='text-xl font-bold text-center'>Tasks</h2>
       <ul className='space-y-2'>
         {tasks.map((task) => (
-          <Task key={task.id} id={task.id} title={task.title} />
+          <Task key={task.id} id={task.id} title={task.title} onDelete={deleteTask} />
         ))}
       </ul>
     </div>
