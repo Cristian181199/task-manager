@@ -34,7 +34,7 @@ function App() {
       <h2 className='text-xl font-bold text-center'>Tasks</h2>
       <ul className='space-y-2'>
         {tasks.map((task) => (
-          <Task key={task.id} title={task.title} />
+          <Task key={task.id} id={task.id} title={task.title} />
         ))}
       </ul>
     </div>
