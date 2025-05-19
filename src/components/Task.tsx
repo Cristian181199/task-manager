@@ -1,6 +1,6 @@
-import type { Task } from '../types';
+import type { TaskType } from '../types';
 
-function Task({title}: Task) {
+function Task({title}: TaskType) {
     return <li>{title}</li>
 }
 
