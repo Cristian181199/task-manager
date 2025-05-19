@@ -1,8 +1,6 @@
-interface TaskProps {
-    title: string;
-}
+import type { Task } from '../types';
 
-function Task({title}: TaskProps) {
+function Task({title}: Task) {
     return <li>{title}</li>
 }
 
